@@ -31,6 +31,10 @@ def make_text_encoder(model: str) -> Embeddings:
             from langchain_cohere import CohereEmbeddings
 
             return CohereEmbeddings(model=model)  # type: ignore
+        case "upstage":
+            from langchain_upstage import UpstageEmbeddings
+
+            return UpstageEmbeddings(model=model)
         case _:
             raise ValueError(f"Unsupported embedding provider: {provider}")
 

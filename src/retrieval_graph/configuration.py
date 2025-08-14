@@ -26,7 +26,8 @@ class IndexConfiguration:
         str,
         {"__template_metadata__": {"kind": "embeddings"}},
     ] = field(
-        default="openai/text-embedding-3-small",
+        # default="openai/text-embedding-3-small",
+        default="upstage/embedding-query",
         metadata={
             "description": "Name of the embedding model to use. Must be a valid embedding model name."
         },
@@ -83,7 +84,8 @@ class Configuration(IndexConfiguration):
     )
 
     response_model: Annotated[str, {"__template_metadata__": {"kind": "llm"}}] = field(
-        default="anthropic/claude-3-5-sonnet-20240620",
+        # default="anthropic/claude-3-5-sonnet-20240620",
+        default="upstage/solar-pro2",
         metadata={
             "description": "The language model used for generating responses. Should be in the form: provider/model-name."
         },
@@ -97,7 +99,8 @@ class Configuration(IndexConfiguration):
     )
 
     query_model: Annotated[str, {"__template_metadata__": {"kind": "llm"}}] = field(
-        default="anthropic/claude-3-haiku-20240307",
+        # default="anthropic/claude-3-haiku-20240307",
+        default="upstage/solar-pro2",
         metadata={
             "description": "The language model used for processing and refining queries. Should be in the form: provider/model-name."
         },
