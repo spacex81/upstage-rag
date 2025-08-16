@@ -1,8 +1,9 @@
 {
   "dependencies": ["."],
   "graphs": {
-    "indexer": "./src/retrieval_graph/index_graph.py:graph",
-    "retrieval_graph": "./src/retrieval_graph/graph.py:graph"
+    "docu_proc": "./src/retrieval_graph/docu_proc_graph.py:graph",
+    "retrieval_graph": "./src/retrieval_graph/graph.py:graph",
+    "section_graph": "./src/retrieval_graph/section_graph.py:section_graph"
   },
   "env": ".env"
 }

@@ -28,6 +28,7 @@ and individual component documentation within the retrieval_graph package.
 """  # noqa
 
 from retrieval_graph.graph import graph
-from retrieval_graph.index_graph import graph as index_graph
+from retrieval_graph.docu_proc_graph import graph as docu_proc_graph
+from retrieval_graph.section_graph import section_graph
 
-__all__ = ["graph", "index_graph"]
+__all__ = ["graph", "docu_proc_graph", "section_graph"]

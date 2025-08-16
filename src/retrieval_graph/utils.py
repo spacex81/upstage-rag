@@ -47,20 +47,42 @@ def get_message_text(msg: AnyMessage) -> str:
 
 
 def _format_doc(doc: Document) -> str:
-    """Format a single document as XML.
+    """Format a single document as XML with citation information.
 
     Args:
         doc (Document): The document to format.
 
     Returns:
-        str: The formatted document as an XML string.
+        str: The formatted document as an XML string with citation info when available.
     """
     metadata = doc.metadata or {}
+    
+    # Extract citation information
+    page_number = metadata.get('page_number')
+    hierarchical_section = metadata.get('hierarchical_section')
+    source_file = metadata.get('source_file', '')
+    
+    # Create citation text based on available metadata
+    citation_parts = []
+    if page_number:
+        citation_parts.append(f"Page {page_number}")
+    if hierarchical_section:
+        citation_parts.append(hierarchical_section)
+    
+    # Format XML attributes (all metadata)
     meta = "".join(f" {k}={v!r}" for k, v in metadata.items())
     if meta:
         meta = f" {meta}"
+    
+    # Add citation text at the end of content if we have citation info
+    content = doc.page_content
+    if citation_parts:
+        citation_text = ", ".join(citation_parts)
+        # Extract just the filename from source_file path
+        file_name = source_file.split('/')[-1] if source_file else "document"
+        content = f"{doc.page_content}\n\n[Citation: {citation_text} from {file_name}]"
 
-    return f"<document{meta}>\n{doc.page_content}\n</document>"
+    return f"<document{meta}>\n{content}\n</document>"
 
 
 def format_docs(docs: Optional[list[Document]]) -> str:
@@ -97,18 +119,7 @@ def format_docs(docs: Optional[list[Document]]) -> str:
 </documents>"""
 
 
-# def load_chat_model(fully_specified_name: str) -> BaseChatModel:
-#     """Load a chat model from a fully specified name.
 
-#     Args:
-#         fully_specified_name (str): String in the format 'provider/model'.
-#     """
-#     if "/" in fully_specified_name:
-#         provider, model = fully_specified_name.split("/", maxsplit=1)
-#     else:
-#         provider = ""
-#         model = fully_specified_name
-#     return init_chat_model(model, model_provider=provider)
 def load_chat_model(fully_specified_name: str) -> BaseChatModel:
     """Load a chat model from a fully specified name.
 

@@ -1,0 +1,201 @@
+{
+  "document_title": "Broadcom Inc. 2024 Annual Report on Form 10-K",
+  "sections": [
+    {
+      "section_name": "Part I",
+      "section_title": "Part I",
+      "start_page_number": 3,
+      "is_subsection": false,
+      "description": "Main Part I section header"
+    },
+    {
+      "section_name": "Item 1",
+      "section_title": "Business",
+      "start_page_number": 3,
+      "is_subsection": true,
+      "description": "Company business overview and operations"
+    },
+    {
+      "section_name": "Item 1A",
+      "section_title": "Risk Factors",
+      "start_page_number": 16,
+      "is_subsection": true,
+      "description": "Risk factors affecting the business"
+    },
+    {
+      "section_name": "Item 1B",
+      "section_title": "Unresolved Staff Comments",
+      "start_page_number": 31,
+      "is_subsection": true,
+      "description": "SEC staff comments and responses"
+    },
+    {
+      "section_name": "Item 1C",
+      "section_title": "Cybersecurity",
+      "start_page_number": 32,
+      "is_subsection": true,
+      "description": "Cybersecurity policies and procedures"
+    },
+    {
+      "section_name": "Item 2",
+      "section_title": "Properties",
+      "start_page_number": 32,
+      "is_subsection": true,
+      "description": "Company properties and facilities"
+    },
+    {
+      "section_name": "Item 3",
+      "section_title": "Legal Proceedings",
+      "start_page_number": 33,
+      "is_subsection": true,
+      "description": "Current legal proceedings and litigation"
+    },
+    {
+      "section_name": "Item 4",
+      "section_title": "Mine Safety Disclosures",
+      "start_page_number": 33,
+      "is_subsection": true,
+      "description": "Mine safety-related disclosures"
+    },
+    {
+      "section_name": "Part II",
+      "section_title": "Part II",
+      "start_page_number": 34,
+      "is_subsection": false,
+      "description": "Main Part II section header"
+    },
+    {
+      "section_name": "Item 5",
+      "section_title": "Market for Registrant's Common Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities",
+      "start_page_number": 34,
+      "is_subsection": true,
+      "description": "Stock market information and equity details"
+    },
+    {
+      "section_name": "Item 6",
+      "section_title": "[Reserved]",
+      "start_page_number": 35,
+      "is_subsection": true,
+      "description": "Reserved section (not used)"
+    },
+    {
+      "section_name": "Item 7",
+      "section_title": "Management's Discussion and Analysis of Financial Condition and Results of Operations",
+      "start_page_number": 36,
+      "is_subsection": true,
+      "description": "MD&A section with financial analysis"
+    },
+    {
+      "section_name": "Item 7A",
+      "section_title": "Quantitative and Qualitative Disclosures About Market Risk",
+      "start_page_number": 47,
+      "is_subsection": true,
+      "description": "Market risk disclosures and analysis"
+    },
+    {
+      "section_name": "Item 8",
+      "section_title": "Financial Statements and Supplementary Data",
+      "start_page_number": 49,
+      "is_subsection": true,
+      "description": "Audited financial statements and notes"
+    },
+    {
+      "section_name": "Item 9",
+      "section_title": "Changes in and Disagreements with Accountants on Accounting and Financial Disclosure",
+      "start_page_number": 92,
+      "is_subsection": true,
+      "description": "Accountant changes and disagreements"
+    },
+    {
+      "section_name": "Item 9A",
+      "section_title": "Controls and Procedures",
+      "start_page_number": 92,
+      "is_subsection": true,
+      "description": "Internal controls and disclosure procedures"
+    },
+    {
+      "section_name": "Item 9B",
+      "section_title": "Other Information",
+      "start_page_number": 93,
+      "is_subsection": true,
+      "description": "Additional material information"
+    },
+    {
+      "section_name": "Item 9C",
+      "section_title": "Disclosure Regarding Foreign Jurisdictions that Prevent Inspections",
+      "start_page_number": 93,
+      "is_subsection": true,
+      "description": "Foreign jurisdiction inspection disclosures"
+    },
+    {
+      "section_name": "Part III",
+      "section_title": "Part III",
+      "start_page_number": 94,
+      "is_subsection": false,
+      "description": "Main Part III section header"
+    },
+    {
+      "section_name": "Item 10",
+      "section_title": "Directors, Executive Officers and Corporate Governance",
+      "start_page_number": 94,
+      "is_subsection": true,
+      "description": "Board of directors and governance information"
+    },
+    {
+      "section_name": "Item 11",
+      "section_title": "Executive Compensation",
+      "start_page_number": 94,
+      "is_subsection": true,
+      "description": "Executive compensation details and analysis"
+    },
+    {
+      "section_name": "Item 12",
+      "section_title": "Security Ownership of Certain Beneficial Owners and Management and Related Stockholder Matters",
+      "start_page_number": 94,
+      "is_subsection": true,
+      "description": "Stock ownership by management and major shareholders"
+    },
+    {
+      "section_name": "Item 13",
+      "section_title": "Certain Relationships and Related Transactions, and Director Independence",
+      "start_page_number": 94,
+      "is_subsection": true,
+      "description": "Related party transactions and director independence"
+    },
+    {
+      "section_name": "Item 14",
+      "section_title": "Principal Accountant Fees and Services",
+      "start_page_number": 94,
+      "is_subsection": true,
+      "description": "Auditor fees and services information"
+    },
+    {
+      "section_name": "Part IV",
+      "section_title": "Part IV",
+      "start_page_number": 95,
+      "is_subsection": false,
+      "description": "Main Part IV section header"
+    },
+    {
+      "section_name": "Item 15",
+      "section_title": "Exhibits and Financial Statement Schedules",
+      "start_page_number": 95,
+      "is_subsection": true,
+      "description": "List of exhibits and financial statement schedules"
+    },
+    {
+      "section_name": "Item 16",
+      "section_title": "Form 10-K Summary",
+      "start_page_number": 101,
+      "is_subsection": true,
+      "description": "Summary of Form 10-K filing"
+    },
+    {
+      "section_name": "Signatures",
+      "section_title": "Signatures",
+      "start_page_number": 102,
+      "is_subsection": false,
+      "description": "Required signatures for the filing"
+    }
+  ]
+}

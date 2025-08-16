@@ -1,0 +1,222 @@
+{
+  "document_title": "Intel Corporation Form 10-K",
+  "sections": [
+    {
+      "section_name": "Fundamentals of Our Business",
+      "section_title": "Fundamentals of Our Business",
+      "start_page_number": 4,
+      "is_subsection": false,
+      "description": "Main fundamentals section header"
+    },
+    {
+      "section_name": "Availability of Company Information",
+      "section_title": "Availability of Company Information",
+      "start_page_number": 4,
+      "is_subsection": true,
+      "description": "Information about company data availability"
+    },
+    {
+      "section_name": "Fundamental of Our Business",
+      "section_title": "Fundamental of Our Business",
+      "start_page_number": 5,
+      "is_subsection": true,
+      "description": "Core business fundamentals"
+    },
+    {
+      "section_name": "Our Strategy",
+      "section_title": "Our Strategy",
+      "start_page_number": 5,
+      "is_subsection": true,
+      "description": "Company strategic direction and plans"
+    },
+    {
+      "section_name": "Our Capital",
+      "section_title": "Our Capital",
+      "start_page_number": 7,
+      "is_subsection": true,
+      "description": "Capital structure and resources"
+    },
+    {
+      "section_name": "Management's Discussion and Analysis",
+      "section_title": "Management's Discussion and Analysis",
+      "start_page_number": 16,
+      "is_subsection": false,
+      "description": "Main MD&A section header"
+    },
+    {
+      "section_name": "Operating Segment Trends and Results",
+      "section_title": "Operating Segment Trends and Results",
+      "start_page_number": 16,
+      "is_subsection": true,
+      "description": "Analysis of operating segment performance"
+    },
+    {
+      "section_name": "Consolidated Results of Operations",
+      "section_title": "Consolidated Results of Operations",
+      "start_page_number": 25,
+      "is_subsection": true,
+      "description": "Consolidated operational results analysis"
+    },
+    {
+      "section_name": "Liquidity and Capital Resources",
+      "section_title": "Liquidity and Capital Resources",
+      "start_page_number": 30,
+      "is_subsection": true,
+      "description": "Liquidity analysis and capital resource management"
+    },
+    {
+      "section_name": "Critical Accounting Estimates",
+      "section_title": "Critical Accounting Estimates",
+      "start_page_number": 32,
+      "is_subsection": true,
+      "description": "Key accounting estimates and assumptions"
+    },
+    {
+      "section_name": "Non-GAAP Financial Measures",
+      "section_title": "Non-GAAP Financial Measures",
+      "start_page_number": 32,
+      "is_subsection": true,
+      "description": "Non-GAAP financial metrics and reconciliations"
+    },
+    {
+      "section_name": "Risk Factors and Other Key Information",
+      "section_title": "Risk Factors and Other Key Information",
+      "start_page_number": 33,
+      "is_subsection": false,
+      "description": "Main risk factors section header"
+    },
+    {
+      "section_name": "Risk Factors",
+      "section_title": "Risk Factors",
+      "start_page_number": 33,
+      "is_subsection": true,
+      "description": "Risk factors affecting the business"
+    },
+    {
+      "section_name": "Sales and Marketing",
+      "section_title": "Sales and Marketing",
+      "start_page_number": 47,
+      "is_subsection": true,
+      "description": "Sales and marketing operations and strategies"
+    },
+    {
+      "section_name": "Quantitative and Qualitative Disclosures About Market Risk",
+      "section_title": "Quantitative and Qualitative Disclosures About Market Risk",
+      "start_page_number": 49,
+      "is_subsection": true,
+      "description": "Market risk disclosures and analysis"
+    },
+    {
+      "section_name": "Cybersecurity",
+      "section_title": "Cybersecurity",
+      "start_page_number": 50,
+      "is_subsection": true,
+      "description": "Cybersecurity policies and procedures"
+    },
+    {
+      "section_name": "Properties",
+      "section_title": "Properties",
+      "start_page_number": 51,
+      "is_subsection": true,
+      "description": "Company properties and facilities"
+    },
+    {
+      "section_name": "Market for Our Common Stock",
+      "section_title": "Market for Our Common Stock",
+      "start_page_number": 51,
+      "is_subsection": true,
+      "description": "Common stock market information"
+    },
+    {
+      "section_name": "Stock Performance Graph",
+      "section_title": "Stock Performance Graph",
+      "start_page_number": 52,
+      "is_subsection": true,
+      "description": "Stock performance comparison and analysis"
+    },
+    {
+      "section_name": "Issuer Purchases of Equity Securities",
+      "section_title": "Issuer Purchases of Equity Securities",
+      "start_page_number": 52,
+      "is_subsection": true,
+      "description": "Company share repurchase activities"
+    },
+    {
+      "section_name": "Rule 10b5-1 Trading Arrangements",
+      "section_title": "Rule 10b5-1 Trading Arrangements",
+      "start_page_number": 52,
+      "is_subsection": true,
+      "description": "Rule 10b5-1 trading plan arrangements"
+    },
+    {
+      "section_name": "Information About Our Executive Officers",
+      "section_title": "Information About Our Executive Officers",
+      "start_page_number": 53,
+      "is_subsection": true,
+      "description": "Executive officer information and backgrounds"
+    },
+    {
+      "section_name": "Disclosure Pursuant to Section 13(r) of the Securities Exchange Act of 1934",
+      "section_title": "Disclosure Pursuant to Section 13(r) of the Securities Exchange Act of 1934",
+      "start_page_number": 54,
+      "is_subsection": true,
+      "description": "Required disclosures under Section 13(r)"
+    },
+    {
+      "section_name": "Financial Statements and Supplemental Details",
+      "section_title": "Financial Statements and Supplemental Details",
+      "start_page_number": 56,
+      "is_subsection": false,
+      "description": "Main financial statements section header"
+    },
+    {
+      "section_name": "Auditor's Reports",
+      "section_title": "Auditor's Reports",
+      "start_page_number": 56,
+      "is_subsection": true,
+      "description": "Independent auditor reports and opinions"
+    },
+    {
+      "section_name": "Consolidated Financial Statements",
+      "section_title": "Consolidated Financial Statements",
+      "start_page_number": 59,
+      "is_subsection": true,
+      "description": "Audited consolidated financial statements"
+    },
+    {
+      "section_name": "Notes to Consolidated Financial Statements",
+      "section_title": "Notes to Consolidated Financial Statements",
+      "start_page_number": 64,
+      "is_subsection": true,
+      "description": "Notes and disclosures to financial statements"
+    },
+    {
+      "section_name": "Key Terms",
+      "section_title": "Key Terms",
+      "start_page_number": 102,
+      "is_subsection": true,
+      "description": "Definitions of key terms and terminology"
+    },
+    {
+      "section_name": "Controls and Procedures",
+      "section_title": "Controls and Procedures",
+      "start_page_number": 104,
+      "is_subsection": true,
+      "description": "Internal controls and disclosure procedures"
+    },
+    {
+      "section_name": "Exhibits",
+      "section_title": "Exhibits",
+      "start_page_number": 105,
+      "is_subsection": true,
+      "description": "List of exhibits and supplementary materials"
+    },
+    {
+      "section_name": "Form 10-K Cross-Reference Index",
+      "section_title": "Form 10-K Cross-Reference Index",
+      "start_page_number": 110,
+      "is_subsection": true,
+      "description": "Cross-reference index for Form 10-K requirements"
+    }
+  ]
+}

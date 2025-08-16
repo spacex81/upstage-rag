@@ -4,7 +4,7 @@ import pytest
 from langchain_core.runnables import RunnableConfig
 from langsmith import expect, unit
 
-from retrieval_graph import graph, index_graph
+from retrieval_graph import graph, docu_proc_graph
 
 
 @pytest.mark.asyncio
@@ -18,7 +18,7 @@ async def test_retrieval_graph() -> None:
         configurable={"user_id": user_id, "retriever_provider": "elastic-local"}
     )
 
-    result = await index_graph.ainvoke({"docs": simple_doc}, config)
+    result = await docu_proc_graph.ainvoke({"docs": simple_doc}, config)
     expect(result["docs"]).against(lambda x: not x)  # we delete after the end
 
     res = await graph.ainvoke(
