@@ -125,6 +125,7 @@ celerybeat.pid
 *.pkl
 .langgraph_api/.langgraph_checkpoint.2.pckl 
 .langgraph_api/.langgraph_checkpoint.3.pckl
+.langgraph_api/*.pckl
 
 # Environments
 .env
