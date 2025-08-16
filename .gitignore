@@ -123,6 +123,8 @@ celerybeat.pid
 
 # Parsed Document Pickle File 
 *.pkl
+.langgraph_api/.langgraph_checkpoint.2.pckl 
+.langgraph_api/.langgraph_checkpoint.3.pckl
 
 # Environments
 .env
