@@ -11,11 +11,12 @@ from typing import cast
 import re
 
 from langchain_core.documents import Document
-from langchain_core.messages import BaseMessage
+from langchain_core.messages import BaseMessage, AIMessage, ToolMessage
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.pydantic_v1 import BaseModel
 from langchain_core.runnables import RunnableConfig
 from langgraph.graph import StateGraph
+from langgraph.prebuilt import ToolNode
 
 from retrieval_graph import retrieval
 from retrieval_graph.configuration import Configuration
@@ -219,19 +220,26 @@ async def retrieve(
         return {"retrieved_docs": response}
 
 
-async def respond(
+async def agent_reasoning(
     state: State, *, config: RunnableConfig
 ) -> dict[str, list[BaseMessage]]:
-    """Call the LLM powering our "agent"."""
+    """ReAct agent that reasons about the query and decides whether to use tools."""
     configuration = Configuration.from_runnable_config(config)
-    # Feel free to customize the prompt, model, and other logic!
+    
+    # Import tools
+    from retrieval_graph.tools import AVAILABLE_TOOLS
+    
+    # ReAct prompt for reasoning and tool usage
     prompt = ChatPromptTemplate.from_messages(
         [
             ("system", configuration.response_system_prompt),
             ("placeholder", "{messages}"),
         ]
     )
+    
+    # Load model and bind tools for ReAct pattern
     model = load_chat_model(configuration.response_model)
+    model_with_tools = model.bind_tools(AVAILABLE_TOOLS)
 
     retrieved_docs = format_docs(state.retrieved_docs)
     message_value = await prompt.ainvoke(
@@ -242,9 +250,31 @@ async def respond(
         },
         config,
     )
-    response = await model.ainvoke(message_value, config)
-    # We return a list, because this will get added to the existing list
+    
+    print("🤔 Agent reasoning about the query and available tools...")
+    response = await model_with_tools.ainvoke(message_value, config)
+    
     return {"messages": [response]}
+
+
+def should_continue_react(state: State) -> str:
+    """Determine if the ReAct agent should continue with tool execution or provide final response."""
+    
+    last_message = state.messages[-1]
+    
+    # Check if the last message has tool calls
+    if hasattr(last_message, 'tool_calls') and last_message.tool_calls:
+        print(f"🔧 Agent decided to use {len(last_message.tool_calls)} tool(s)")
+        return "execute_tools"
+    else:
+        print("✅ Agent provided final response without tools")
+        return "__end__"
+
+
+
+
+
+
 
 
 # Define a new graph (It's just a pipe)
@@ -252,12 +282,32 @@ async def respond(
 
 builder = StateGraph(State, input=InputState, config_schema=Configuration)
 
+# Import tools for ToolNode
+from retrieval_graph.tools import AVAILABLE_TOOLS
+
+# Add nodes for ReAct pattern
 builder.add_node(generate_query)
 builder.add_node(retrieve)
-builder.add_node(respond)
+builder.add_node(agent_reasoning)
+builder.add_node("execute_tools", ToolNode(AVAILABLE_TOOLS))
+
+# Define the ReAct flow
 builder.add_edge("__start__", "generate_query")
 builder.add_edge("generate_query", "retrieve")
-builder.add_edge("retrieve", "respond")
+builder.add_edge("retrieve", "agent_reasoning")
+
+# ReAct loop: agent reasons, then either uses tools or provides final response
+builder.add_conditional_edges(
+    "agent_reasoning",
+    should_continue_react,
+    {
+        "execute_tools": "execute_tools",
+        "__end__": "__end__"
+    }
+)
+
+# After tool execution, go back to agent reasoning for continued ReAct loop
+builder.add_edge("execute_tools", "agent_reasoning")
 
 # Finally, we compile it!
 # This compiles it into a graph you can invoke and deploy.
